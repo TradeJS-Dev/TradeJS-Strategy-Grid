@@ -9,6 +9,10 @@ price. Fast and slow EMA plus ATR regimes define direction and spacing; entries
 use pullback recovery or breakout-retest continuation, with bounded levels and
 exits for regime flips or volatility shocks.
 
+## Logic at a glance
+
+![Grid strategy logic](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-Grid/main/docs/strategy-logic.svg)
+
 ## Install
 
 ```bash
