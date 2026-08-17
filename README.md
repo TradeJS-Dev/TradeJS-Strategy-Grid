@@ -2,6 +2,13 @@
 
 TradeJS strategy plugin providing `Grid`.
 
+## Strategy overview
+
+`Grid` is a trend-aware adaptive grid, not a fixed ladder around an arbitrary
+price. Fast and slow EMA plus ATR regimes define direction and spacing; entries
+use pullback recovery or breakout-retest continuation, with bounded levels and
+exits for regime flips or volatility shocks.
+
 ## Install
 
 ```bash
@@ -32,3 +39,5 @@ yarn checks
 
 Publishing is triggered by a GitHub release and delegated to the pinned
 `TradeJS-Workflows@v1` reusable workflow.
+
+Keywords: ai, claude, codex.
