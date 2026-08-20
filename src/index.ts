@@ -1,9 +1,10 @@
 import { defineStrategyPlugin } from "@tradejs/core/config";
-import type { StrategyConfig, StrategyRegistryEntry } from "@tradejs/types";
+import type { ValidatedStrategyRegistryEntry } from "@tradejs/strategy-kit/config";
+import type { StrategyConfig } from "@tradejs/types";
 import { config as gridDefaultConfig } from "./Grid/config";
 import { GridStrategyDefinition } from "./Grid/strategy";
 
-export const strategyEntries: StrategyRegistryEntry[] = [
+export const strategyEntries: ValidatedStrategyRegistryEntry<any>[] = [
   GridStrategyDefinition,
 ];
 
