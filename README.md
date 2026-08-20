@@ -13,6 +13,15 @@ exits for regime flips or volatility shocks.
 
 ![Grid strategy logic](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-Grid/main/docs/strategy-logic.svg)
 
+## Signal on an example chart
+
+Unlike a fixed ladder, the illustrated grid follows the detected uptrend; a pullback into an ATR-spaced level and recovery releases the entry.
+
+![Grid signal on an illustrative ticker chart](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-Grid/main/docs/signal-example.svg)
+
+The illustration is schematic, not market data. Exact thresholds, confirmation
+rules, and risk parameters come from the active TradeJS strategy config.
+
 ## Install
 
 ```bash
