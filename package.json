@@ -1,6 +1,6 @@
 {
   "name": "@tradejs/strategy-grid",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Trend-aware adaptive grid strategy with EMA and ATR regimes, pullback or breakout-retest entries, and bounded scaling for TradeJS.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
