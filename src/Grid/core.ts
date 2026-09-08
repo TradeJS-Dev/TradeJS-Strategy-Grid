@@ -262,9 +262,9 @@ const buildExecutionStateKey = (config: GridConfig) =>
     detector: buildGridDetectorKey(config),
     maxLossValue: config.MAX_LOSS_VALUE,
     maxLevels: config.GRID_MAX_LEVELS,
-    feePercent: config.FEE_PERCENT,
-    slippageBaseBps: config.SLIPPAGE_BASE_BPS,
-    slippageMarketImpactBps: config.SLIPPAGE_MARKET_IMPACT_BPS,
+    feePercent: config.RISK_FEE_RATE,
+    slippageBaseBps: config.RISK_SLIPPAGE_BPS,
+    slippageMarketImpactBps: config.RISK_MARKET_IMPACT_BPS,
     entryMode: config.GRID_ENTRY_MODE,
     continuationAllowScaleIn: config.GRID_CONTINUATION_ALLOW_SCALE_IN,
     continuationRiskMode: config.GRID_CONTINUATION_RISK_MODE,
@@ -447,11 +447,11 @@ export const createGridCore: CreateStrategyCore<
   );
   const continuationTargetR = Number(config.GRID_CONTINUATION_TARGET_R ?? 1);
   const maxLossValue = Math.max(0, Number(config.MAX_LOSS_VALUE ?? 0));
-  const feeRate = Math.max(0, Number(config.FEE_PERCENT ?? 0));
+  const feeRate = Math.max(0, Number(config.RISK_FEE_RATE ?? 0));
   const slippageBps = Math.max(
     0,
-    Number(config.SLIPPAGE_BASE_BPS ?? 0) +
-      Number(config.SLIPPAGE_MARKET_IMPACT_BPS ?? 0),
+    Number(config.RISK_SLIPPAGE_BPS ?? 0) +
+      Number(config.RISK_MARKET_IMPACT_BPS ?? 0),
   );
   const executionCostRate = feeRate + slippageBps / 10_000;
   const minNetRiskRatio = Math.max(
